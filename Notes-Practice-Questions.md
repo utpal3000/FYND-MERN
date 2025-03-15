@@ -241,3 +241,118 @@ code.on("close", () => {
 
 ### Q. How to get last second digigt?
 Ans : `parseInt(Num/10)%10`
+
+## WHILE Loops
+
+```javaScript
+while (condition){
+    // code
+}
+```
+
+### Q. How to extract no. from left to right ?
+Ans :
+1204
+
+1
+2
+0
+4
+
+Approch - Think how u can get the first digit
+Divide the no. to that of the length * 10
+```
+1204/1000 = 1 // use math.floor or parseInt()
+```
+### Q. Take a number and return all the even digits of the number.
+
+Constraints:
+0 <= number <= 10000
+
+Input:
+A single integer is provided as input.
+Output:
+Return a list of even digits of the number, each digit in a new line.Return -1 in case there are no even digits
+
+Example:
+Input:
+1204
+Output:
+2
+0
+4
+
+Ans : 
+```js
+let number = 1204 // get the input 
+
+// Variable to track if we found any even digit
+let foundEvenDigit = false;
+
+// Calculate the number of digits in the input number
+let originalNumber = number;
+let divisor = 1;
+
+// Calculate divisor to extract digits from left to right
+while (originalNumber >= 10) {
+    originalNumber = parseInt(originalNumber / 10);
+    divisor *= 10;
+}
+
+// Now loop through the digits from left to right
+while (divisor >= 1) {
+    let digit = parseInt(number / divisor);  // Extract the most significant digit
+    if (digit % 2 === 0) {  // Check if the digit is even
+        console.log(digit);  // Print the even digit
+        foundEvenDigit = true;
+    }
+    number = number % divisor;  // Remove the most significant digit
+    divisor = parseInt(divisor / 10);  // Move to the next digit
+}
+
+// If no even digit is found, print -1
+if (!foundEvenDigit) {
+    console.log(-1);
+}
+
+```
+
+### Q. Take an integer an return 'YES' if the input is a palindrome, or 'NO' if it is not.
+
+Ans :
+
+```JS
+  let a = parseInt(input[0])
+    
+  let newNum = ''
+  let oNum = a
+  while(a>0){
+    newNum += a%10
+    a = parseInt(a/10)
+  }
+ if (newNum == oNum){
+   console.log('YES')
+ }else{
+   console.log('NO')
+ }
+  ```
+
+### Q5. Take a integer as input and return the number of zeroes in the input.
+
+Ans :
+
+```JS
+let a = parseInt(input[0])
+  
+  let newNum = a;
+  let count = 0;
+  while (a>0){
+    let digit = a%10
+    if(digit == 0){
+      count++
+    }
+    a = parseInt(a/10)
+  }
+ 
+  console.log(count)```
+
