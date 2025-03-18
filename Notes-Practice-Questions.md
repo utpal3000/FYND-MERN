@@ -242,117 +242,256 @@ code.on("close", () => {
 ### Q. How to get last second digigt?
 Ans : `parseInt(Num/10)%10`
 
-## WHILE Loops
-
-```javaScript
-while (condition){
-    // code
+## Loops 2 (Whilel loops)
+```js
+while(conditon){
+    // code to run
 }
 ```
 
-### Q. How to extract no. from left to right ?
+### HCF and LCM
 Ans :
-1204
 
-1
-2
-0
-4
+```javascript
+const readline = require("readline");
+const code = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data);
+});
 
-Approch - Think how u can get the first digit
-Divide the no. to that of the length * 10
+// ignore code above It
+code.on("close", () => {
+  let input = userInput;
+  let a = parseInt(input[0]);
+  let b = parseInt(input[1]);
+
+  let originalA = a; // Store original values of a and b
+  let originalB = b;
+
+  // Calculate HCF using the Euclidean algorithm
+  while (b > 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  let hcf = a; // When b becomes 0, a is the HCF
+
+  // Calculate LCM using the formula LCM(a, b) = (originalA * originalB) / HCF
+  let lcm = (originalA * originalB) / hcf;
+
+  console.log(hcf); // Print HCF
+  console.log(lcm); // Print LCM
+});
 ```
-1204/1000 = 1 // use math.floor or parseInt()
+
+---
+
+### Key Changes and Fixes:
+1. **Corrected the Euclidean Algorithm**:
+   - Swapped `a` and `b` iteratively until `b` became 0. This ensures the calculation of HCF is accurate.
+
+2. **Preserved Original Values**:
+   - Stored the original values of `a` and `b` (`originalA` and `originalB`) before modifying them in the loop, ensuring accurate LCM computation.
+
+3. **Calculated LCM Correctly**:
+   - Used the formula \(\text{LCM}(a, b) = \frac{\text{OriginalA} \times \text{OriginalB}}{\text{HCF}}\).
+
+---
+
+### Example Run:
+#### Input:
 ```
-### Q. Take a number and return all the even digits of the number.
+12
+18
+```
+#### Output:
+```
+6
+36
+```
 
-Constraints:
-0 <= number <= 10000
+#### Explanation:
+- HCF of 12 and 18 is **6**.
+- LCM of 12 and 18 is \((12 \times 18) / 6 = 36\).
 
-Input:
-A single integer is provided as input.
-Output:
-Return a list of even digits of the number, each digit in a new line.Return -1 in case there are no even digits
+Certainly! Let's break down the problem and solve it step by step.
 
-Example:
-Input:
-1204
-Output:
-2
-0
-4
+### Q. Take a number as input and return the sum of all of its digits.
 
 Ans : 
+
 ```js
-let number = 1204 // get the input 
-
-// Variable to track if we found any even digit
-let foundEvenDigit = false;
-
-// Calculate the number of digits in the input number
-let originalNumber = number;
-let divisor = 1;
-
-// Calculate divisor to extract digits from left to right
-while (originalNumber >= 10) {
-    originalNumber = parseInt(originalNumber / 10);
-    divisor *= 10;
-}
-
-// Now loop through the digits from left to right
-while (divisor >= 1) {
-    let digit = parseInt(number / divisor);  // Extract the most significant digit
-    if (digit % 2 === 0) {  // Check if the digit is even
-        console.log(digit);  // Print the even digit
-        foundEvenDigit = true;
-    }
-    number = number % divisor;  // Remove the most significant digit
-    divisor = parseInt(divisor / 10);  // Move to the next digit
-}
-
-// If no even digit is found, print -1
-if (!foundEvenDigit) {
-    console.log(-1);
-}
-
+num % 10 // gives last digit
+num / 10 // cuts the last digit with parseInt()
 ```
 
-### Q. Take an integer an return 'YES' if the input is a palindrome, or 'NO' if it is not.
+### Problem Explanation:
+1. You are given a single number (`num`) as input. The number will be between 0 and 100,000 (inclusive).
+2. The goal is to compute the **sum of all the digits** in the number. For example:
+   - If the input is `100`, the sum of its digits is \(1 + 0 + 0 = 1\).
+   - If the input is `456`, the sum is \(4 + 5 + 6 = 15\).
+3. The output will be the computed sum.
 
-Ans :
+---
 
-```JS
-  let a = parseInt(input[0])
-    
-  let newNum = ''
-  let oNum = a
-  while(a>0){
-    newNum += a%10
-    a = parseInt(a/10)
+### Steps to Solve:
+1. Take the input number as a string or integer.
+2. Extract each digit from the number.
+3. Add all the digits together to compute the sum.
+4. Print the result.
+
+---
+
+### Example Solution in JavaScript:
+Here’s how you can implement this:
+
+```javascript
+const readline = require("readline");
+const code = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+code.on("line", (data) => {
+  let num = parseInt(data); // Convert input to an integer
+  let sum = 0;
+
+  while (num > 0) {
+    let digit = num % 10; // Get the last digit
+    sum += digit; // Add it to the sum
+    num = Math.floor(num / 10); // Remove the last digit
   }
- if (newNum == oNum){
-   console.log('YES')
- }else{
-   console.log('NO')
- }
+
+  console.log(sum); // Print the sum of digits
+  code.close();
+});
+```
+
+---
+
+### Explanation of the Code:
+1. **Extract Digits**:
+   - Use the modulo operator (`num % 10`) to get the last digit of the number.
+   - Use integer division (`Math.floor(num / 10)`) to remove the last digit.
+2. **Add Digits**:
+   - Keep a running total (`sum`) to store the sum of all digits.
+3. **Loop Until Done**:
+   - Continue the process until the number becomes `0`.
+
+---
+
+### Example Run:
+#### Input:
+```
+100
+```
+#### Output:
+```
+1
+```
+
+Here’s how it works:
+- First iteration: `digit = 100 % 10 = 0`, sum = `0 + 0 = 0`, `num = 100 / 10 = 10`.
+- Second iteration: `digit = 10 % 10 = 0`, sum = `0 + 0 = 0`, `num = 10 / 10 = 1`.
+- Third iteration: `digit = 1 % 10 = 1`, sum = `0 + 1 = 1`, `num = 1 / 10 = 0`.
+
+Once `num` becomes `0`, the loop ends, and the result `1` is printed.
+
+---
+
+### Q. Take an integer and print 'YES' if the input integer is an armstrong number, otherwise print 'NO'.
+
+Ans : 
+Get length using for loop and then get digits using `mod` 
+
+```js
+ let a = parseInt(input[0])
+  
+  let sum = 0
+  let length = 0
+  let number = a;
+  let orignal = a
+  while(a>0){
+    a = parseInt(a/10);
+    length++
+  }
+  let i = 0
+  while(i<length){
+    let digit = number%10
+    sum += digit**length
+    number= parseInt(number/10);
+    i++
+  }
+ console.log(sum == orignal ? 'YES' : 'NO')
   ```
 
-### Q5. Take a integer as input and return the number of zeroes in the input.
+  ### Q. Take an integer as input and print 'YES' if the number is a special number. Otherwise, print 'NO'.
 
-Ans :
-
-```JS
-let a = parseInt(input[0])
+  Ans : Same approch as above
+  ```js
+   let a = parseInt(input[0])
   
-  let newNum = a;
-  let count = 0;
-  while (a>0){
-    let digit = a%10
-    if(digit == 0){
-      count++
-    }
-    a = parseInt(a/10)
+  let sum = 0
+  let length = 0
+  let number = a;
+  let orignal = a
+  while(a>0){
+    a = parseInt(a/10);
+    length++
   }
- 
-  console.log(count)```
+  let i = 0
+  while(i<length){
+    let digit = number%10
+    // sum += digit**length
+    // number= parseInt(number/10);
+    // i++
+    let fsum=0
+    for (let i = 1; i <=4;i++){
+      fsum += digit*i
+    }
+    sum += fsum
+    i++ // no not run infinte loop!
+  }
+ console.log(sum == orignal ? 'YES' : 'NO')
+ ```
 
+ ### Q. For number from 1 to 100 if number is divisible by 3 print 'Hello' if divisible by 5 print 'World', if divisible by 15 print 'HelloWorld' else print the number itself.
+
+ Ans : Use simple `while loop` and if else
+ ```js
+ let number = 1;
+
+while(number <=100){
+  if(number%15==0){
+    console.log('HelloWorld')
+  }else if (number%5==0){
+    console.log('World')
+  }else if (number%3==0){
+    console.log('Hello')
+  }else{
+    console.log(number)
+  }
+  
+  number++
+}
+ ```
+
+ ### Q. Take an integer input and print 'YES' if the integer is a mars number, else print 'NO'.
+
+ Ans : Use length to determine it.
+ ```js
+  let a = parseInt(input[0])
+    // let sum = 0
+  let length = 0
+  // let number = a;
+  // let orignal = a
+  while(a>0){
+    a = parseInt(a/10);
+    length++
+  }
+console.log(length%2==0 ? 'YES' : 'NO')
+  
+  ```
