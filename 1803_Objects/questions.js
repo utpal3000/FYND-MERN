@@ -25,7 +25,7 @@ let fruits = {
 
 // let friendsFruits = {fruits, friends}
 
-let friendsFruits ={...friends,...fruits}; // use spread operator
+let friendsFruits = {...friends,...fruits}; // use spread operator
 
 
 // for (let t in fruits){
