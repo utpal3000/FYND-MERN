@@ -495,3 +495,27 @@ while(number <=100){
 console.log(length%2==0 ? 'YES' : 'NO')
   
   ```
+
+## Strings
+`let myFruit = new String()`
+### Q6. Read a string input and return it with inverted cases, that is, uppercased characters are converted into lower case and vice-versa.
+Ans : 
+1. Read the question twice and properly.
+2. Read it again!
+```JS
+ let inputString = input[0]
+// let count = 0
+ let invertedString = ""; // Initialize an empty string to store the result
+  
+  for (let i = 0; i < inputString.length; i++) {
+        const char = inputString[i];
+        if (char === char.toUpperCase()) {
+            invertedString += char.toLowerCase();
+        } else {
+            invertedString += char.toUpperCase();
+        }
+    }
+  
+    console.log(invertedString); // Print the result
+```
+
