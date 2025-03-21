@@ -519,3 +519,13 @@ Ans :
     console.log(invertedString); // Print the result
 ```
 
+### Q8. Check if “ram” is present in string.
+Ans :
+Use `includes` 
+```JS
+if (a.includes("ram")) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+  ```
