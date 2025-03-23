@@ -529,3 +529,60 @@ if (a.includes("ram")) {
     console.log("NO");
   }
   ```
+
+## Array 
+` const myArray = new Array()`
+### Q2. Take 10 elements in an array (arr) and find the second biggest number.
+
+Constraints:
+0 <= arr[i] <= 1000 ; 0<=i<=9
+
+Input:
+An array of 10 integers, each in a new line.
+Output:
+A single integer which is the second maximum number among the array elements
+
+Example:
+Input:
+1
+2
+1
+3
+4
+5
+2
+11
+12
+2
+Output:
+11
+
+Ans : 
+
+1. Get the input ie numbers in integer form.
+2. Sort it using `array.sort((a,b)=>a-b);`
+3. Use the `length` of the array to get the second last digit.
+```JS
+const readline = require("readline");
+const code = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const userInput = [];
+
+code.on("line", (data) => {
+  userInput.push(parseInt(data)); // Push each line into the array
+});
+
+code.on("close", () => {
+  let input = userInput; // Assign the entire input array to 'input'
+  
+  // console.log(input)
+  let last=0;
+  let mid = 0;
+let inputNew = input.sort((a, b) => a - b);
+
+  console.log(inputNew[inputNew.length-2])
+});
+```
