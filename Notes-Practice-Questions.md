@@ -586,3 +586,150 @@ let inputNew = input.sort((a, b) => a - b);
   console.log(inputNew[inputNew.length-2])
 });
 ```
+
+### Q4. Take n elements into an array and print the odd numbers and even numbers seperately in two lines.
+
+Constraints:
+0 <= arr[i] <= 1000 ; 0<=i<=9
+
+Input:
+First line of input contains n, the number of elements in the input array
+Next n lines contain elements of the array of n integers, each in a new line.
+Output:
+First line of output contains all the odd numbers in the input array, seperated by a comma
+Second line of output contains all the even numbers in the input array, seperated by a comma
+
+Example:
+Input:
+11
+23
+233
+212
+250
+590
+231
+553
+678
+900
+100
+101
+
+Output:
+23,233,231,553,101
+212,250,590,678,900,100
+
+Ans :
+
+Use if else to check instead of filter.
+
+```JS
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const n = parseInt(userInput[0]); // First line is the count of elements
+  const array = userInput.slice(1, n + 1).map(Number); // Remaining lines are the array elements
+
+  // Separating odd and even numbers
+  const oddNumbers = array.filter(num => num % 2 !== 0);
+  const evenNumbers = array.filter(num => num % 2 === 0);
+
+  // Printing output as comma-separated values
+  console.log(oddNumbers.join(","));
+  console.log(evenNumbers.join(","));
+});
+
+```
+
+
+
+### Q5. Take two arrays A,B of same size, multiply corresponding elements, store them in a third array and print it.
+```
+Constraints:
+0 <= A[i] <= 1000;
+0 <= B[j] <= 1000;
+0 < i,j <= 100
+
+Input:
+Two integer arrays of same size, each in a new line
+Output:
+An array of the same size as the input, each element corresponds to the product of the two elements at the same index in each of the input arrays.
+
+Example:
+Input:
+2,3,4,5,6
+1,2,3,4,5
+
+Output:
+2,6,12,20,30
+```
+
+Ans :
+
+Taking input was the challenge :|
+```js
+const readline = require("readline");
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data);
+});
+
+code.on("close", () => {
+  // Split and convert input strings into arrays of numbers
+  let one = userInput[0].split(",").map(Number);
+  let two = userInput[1].split(",").map(Number);
+
+  let three = [];
+  
+  for (let i = 0; i < one.length; i++) { // Correct loop condition
+    let num = one[i] * two[i]; // Multiply elements
+    three.push(num); // Correct push syntax
+  }
+  
+  console.log(three.join(',')); // Output the resulting array
+});
+
+```
+
+### Q.6 Take two arrays, merger them and store it as a third array. Print it out.
+
+Ans : 
+1. Use spread operator to concate `...array1`
+2. Output the array using `array.join(',')` to get it with comma without `[]`
+
+```JS
+const readline = require("readline");
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data);
+});
+
+code.on("close", () => {
+  // Split and convert input strings into arrays of numbers
+  let one = userInput[0].split(",").map(Number);
+  let two = userInput[1].split(",").map(Number);
+  
+  let third = [...one,...two]
+  console.log(third.join(','))
+
+
+});
+
+```
