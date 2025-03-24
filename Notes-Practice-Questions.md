@@ -733,3 +733,141 @@ code.on("close", () => {
 });
 
 ```
+
+### Q. 7 Take an array with several 0s in it, push all the 0s to the start of the array and print the array.
+
+Ans :
+1. Use `for of loop`
+
+```JS
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const n = parseInt(userInput[0]); // First line is the count of elements
+  const array = userInput.slice(1, n + 1).map(Number); // Remaining lines are the array elements
+  // ignore above but learn it later!
+  // console.log(array)
+  for(a of array){
+    if(a == 0){
+      console.log(a)
+    }
+  }
+  for(a of array){
+    if (a !== 0){
+      console.log(a)
+    }
+  }
+});
+
+```
+
+### Q8. Insert a given integer x in the middle of a given array arr.
+
+Constraints:
+
+0 <= n <= 100;
+0 <= A[i] <= 1000;
+0 < i <= 100
+
+Input:
+First line of input contains the integer to be inserted.
+Second line contains the length N of array arr.
+Next N lines of the input contains the elements of the array in which x is to be inserted at index len/2 if len is even and (len-1/2) if len is odd.
+Output:
+Array arr after x is inserted at the index mentioned.
+
+Example:
+1)
+Input:
+5
+3
+1
+2
+4
+Output:
+1
+5
+2
+4
+
+Input:
+10
+4
+1
+2
+3
+4
+Output:
+1
+2
+10
+3
+4
+
+Explanation:
+Case 1:
+len = 3. Hence x=5 is inserted at index len-1/2 = 1
+
+Case 2:
+len = 2. Hence x=10 is inserted at index len/2 = 1
+
+
+
+Ans :
+
+1. Read the question properly
+2. `Math.floor` use `parseInt` instead
+
+```JS
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const n = parseInt(userInput[0]); // Integer to be inserted
+  const len = parseInt(userInput[1]); // Length of the array
+  const array = userInput.slice(2).map(Number); // Extract and parse array elements
+
+  let locate = 0;
+  if (len % 2 === 0) {
+    locate = Math.floor(array.length / 2); // Middle for even-length array
+  } else {
+    locate = Math.floor((array.length - 1) / 2); // Middle for odd-length array
+  }
+
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (i === locate) {
+      newArray.push(n); // Insert 'n' at the calculated index
+    }
+    newArray.push(array[i]);
+  }
+
+  if (locate === array.length) {
+    newArray.push(n); // Append 'n' if it needs to be inserted at the end
+  }
+
+  for (const num of newArray) {
+    console.log(num); // Print the resulting array
+  }
+});
+
+```
