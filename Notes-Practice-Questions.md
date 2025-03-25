@@ -586,3 +586,41 @@ let inputNew = input.sort((a, b) => a - b);
   console.log(inputNew[inputNew.length-2])
 });
 ```
+
+### Q9. Take 3 integers a,b,c, insert them at the start of an array and return the array.
+
+Ans :
+1. Use spread operator to contact the two array
+2. Use `for of` loop to print the new array.
+
+```JS
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const a = parseInt(userInput[0]);
+  const b = parseInt(userInput[1]);
+  const c = parseInt(userInput[2]);
+  // Integer to be inserted
+  const len = parseInt(userInput[3]); // Length of the array
+  const array = userInput.slice(4).map(Number); // Extract and parse array elements
+
+  // console.log(a,b,c,len,array)
+  let newArray = [a,b,c,...array]
+  for (e of newArray){
+    console.log(e)
+  }
+  
+
+});
+
+```
