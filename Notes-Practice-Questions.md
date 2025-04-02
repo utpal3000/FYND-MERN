@@ -871,3 +871,137 @@ code.on("close", () => {
 });
 
 ```
+### Q9. Take an array, delete the element at the second index and return the resultant array.
+
+Ans : 
+Two ways 
+1. Use  `continue`
+2. Use `shift` to delete and `unshift` to add
+
+```JS
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const n = parseInt(userInput[0]); // First line is the count of elements
+  const array = userInput.slice(1, n + 1).map(Number); // Remaining lines are the array elements
+  
+  // method -1
+  // console.log(array)
+  // let newArray = []
+  // for(let i = 0; i<n;i++){
+  //   if(i==2){
+  //     continue
+  //   }else{
+  //     newArray.push(array[i])
+  //   }
+  // }
+  
+  // for(a of newArray){
+  //   console.log(a)
+  // }
+  //
+  
+  // method -2 
+  
+  let one = array[0];
+  let two = array[1];
+  // console.log(one,two)
+  // let three = array[2];
+ 
+  array.shift()
+  array.shift()
+  array.shift()
+  
+  array.unshift(two)
+  array.unshift(one)
+  
+  for(a of array){
+    console.log(a)
+  }
+  
+  
+  
+  
+});
+```
+
+### Q10. Take 3 integers a,b,c, insert them at the start of an array and return the array.
+
+Constraints:
+
+0 <= a,b,c <= 100;
+0 <= A[i] <= 1000;
+0 < i <= 100
+
+Input:
+First 3 lines of input contains the integers to be inserted.
+Next line contains N, the size of array.
+Next N lines of the input contains the array in which x is to be inserted at index len/2 if len is even and (len-1/2) if len is odd.
+Output:
+Array arr after a,b,c is inserted at the start of arr.
+
+Example:
+Input:
+1
+2
+3
+4
+2
+3
+4
+5
+Output:
+1
+2
+3
+2
+3
+4
+5
+
+Ans : 
+1. Get the input first
+2. Get them in array 
+3. Print them using for of
+
+```js
+const readline = require("readline");
+
+// Setting up input interface
+const code = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+code.on("line", (data) => {
+  userInput.push(data); // Reading input
+});
+
+code.on("close", () => {
+  const a = parseInt(userInput[0]);
+  const b = parseInt(userInput[1]);
+  const c = parseInt(userInput[2]);
+  // Integer to be inserted
+  const len = parseInt(userInput[3]); // Length of the array
+  const array = userInput.slice(4).map(Number); // Extract and parse array elements
+
+  // console.log(a,b,c,len,array)
+  let newArray = [a,b,c,...array]
+  for (e of newArray){
+    console.log(e)
+  }
+  
+
+});
+
+```
