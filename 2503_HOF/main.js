@@ -30,7 +30,31 @@ console.log(x) // [30]
 
 // lets get sum of the array
 
+console.log('--- Reduce ---')
+// let display = (sum,value,index) =>console.log(sum,value);
 
-let display = (sum,value,index) =>console.log(sum,value);
+// arr.reduce(display,0)
 
-arr.reduce(display,0)
+x = arr.reduce((sum,value,index)=>sum+value,0)
+console.log(x)
+// sum is consideted as prev value use it when need prev. and current value of value being returned.
+console.log('---- Revision ---')
+// Take a array of string and return the length of each string, then return/print odd lenght, finally find the sum of all odd length.
+
+let strArr = ['samosa', 'pap', 'banana', 'kiwi', 'grape'];
+
+// Step 1: Get the length of each string
+let eLength = strArr.map(value => value.length);
+console.log("Lengths of strings:", eLength);
+
+// Step 2: Filter out the odd lengths
+let eFil = eLength.filter(value => value % 2 !== 0);
+console.log("Odd lengths:", eFil);
+
+// Step 3: Sum the odd lengths
+let eOdd = eFil.reduce((sum, value) => sum + value, 0);
+console.log("Sum of odd lengths:", eOdd);
+
+// We can get the sum of odd length using .
+
+console.log(strArr.map(value=>value.length).filter(value=>value%2!=0).reduce( (sum,value)=>sum+value,0))
