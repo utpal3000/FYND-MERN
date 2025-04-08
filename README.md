@@ -15,4 +15,5 @@ Fynd MERN (JavaScript) cohort Resources, Notes and etc.
 
 1. Callbacks revison
 2. HOF
+3. map and forEach
 
