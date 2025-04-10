@@ -17,3 +17,8 @@ Fynd MERN (JavaScript) cohort Resources, Notes and etc.
 2. HOF
 3. map and forEach
 
+## Day 26 March
+
+1. Sync code
+2. Async code
+3.
