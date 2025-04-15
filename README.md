@@ -39,3 +39,13 @@ https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-
 1. Basic html tags
 2. CSS style
 3. Links and Lists
+
+## Class 18 - 1 April
+
+1. Discuss Assignments
+2. Do assignments and come on Tuesday and let's study on wed n thu.
+3. Codewars for coding.
+
+Here is **[Assignments Sheet](https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-dBo/edit?usp=sharing)**
+
+
