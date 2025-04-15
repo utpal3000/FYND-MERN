@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block and Inline Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .block-example {
+            background-color: #f4f4f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .inline-example {
+            color: #007bff;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Block and Inline Elements</h1>
+    </header>
+
+    <section class="block-example">
+        <h2>Block Elements</h2>
+        <p>This is a paragraph, which is a block element. It always starts on a new line.</p>
+        <div>
+            This is a div element, another block element, used to group content.
+        </div>
+    </section>
+
+    <section class="block-example">
+        <h2>Inline Elements</h2>
+        <p>This is a paragraph containing inline elements. 
+            <span class="inline-example">This is an inline span element</span>, 
+            <a href="#">this is an inline link</a>, and here’s an 
+            <strong>inline bold text</strong>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Block and Inline Elements Page</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Styling for the h1 element */
+h1 {
+    font-size: 2em;
+    color: darkorange;
+    text-align: center;
+}
+
+/* Styling for all paragraph elements */
+p {
+    color: green;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the element with id 'mango007' */
+#mango007 {
+    color: red;
+    font-weight: bold;
+}
+
+/* Links styling */
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+/* Adding some margin to the body for better layout */
+body {
+    margin: 20px;
+    font-family: Verdana, sans-serif;
+}

@@ -85,3 +85,11 @@ Certainly! Here are concise notes on your topics:
     - **`id`**: Unique identifier for an element. Example: `<div id="header">`.
     - **`class`**: Class name for grouping multiple elements. Example: `<div class="container">`.
 
+   
+   We can add # in links too so that the page opens at perticuar id of that page.
+
+   eg:
+   ```html
+   <a href='fruits.html#banana'>
+   ```
+
