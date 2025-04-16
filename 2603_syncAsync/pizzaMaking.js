@@ -50,6 +50,9 @@ setTimeout(() => {
         console.log('Order placed');
         setTimeout(()=>{
             console.log('cooking');
+            setTimeout(()=>{
+                console.log('Add chesse')
+            },2000)
         },5000)
     },3000)
 }, 2000);

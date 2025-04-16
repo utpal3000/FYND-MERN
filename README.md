@@ -48,4 +48,4 @@ https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-
 
 Here is **[Assignments Sheet](https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-dBo/edit?usp=sharing)**
 
-
+## Class 19 - 
