@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Colors Example</title>
+  <style>
+    body {
+      background-color: #F0F8FF; /* Hexadecimal color for AliceBlue */
+      color: black; /* Default text color */
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: hsl(123, 80%, 50%); /* HSL color for sky blue */
+      text-align: center;
+    }
+
+    .red-text {
+      color: red; /* Named color */
+    }
+
+    .transparent-box {
+      background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+      padding: 20px;
+      border: 2px solid #000;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Colors in Action</h1>
+  <p class="red-text">This text is styled with a named color: red.</p>
+  <div class="transparent-box">This box has a semi-transparent red background.</div>
+</body>
+</html>

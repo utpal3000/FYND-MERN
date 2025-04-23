@@ -57,4 +57,3 @@ Here’s a simple example:
 - **Maintainability:** Update the style in one place (CSS file) to reflect changes across all elements with that class.
 - **Flexibility:** Combine multiple classes on one element for complex styling.
 
-Would you like to explore more about combining classes or their relationship with IDs? Let me know!
