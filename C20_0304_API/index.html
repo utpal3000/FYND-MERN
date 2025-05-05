@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+
+        #apple{
+           background-color: red; 
+        }
+
+        .list li {
+            background-color: bisque;
+        }
+
+        li{
+            /* background-color: greenyellow !important; */ 
+            /* This above has important can override all styles. */
+        }
+
+        .list{
+            background-color: aqua;
+        }
+        .list #banana {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Specificity</h1>
+    <ul class="list">
+        <li id="apple">
+            Apple
+        </li>
+        <li id="banana">
+            Banana
+        </li>
+        <li>Grapes</li>
+    </ul>
+    <ul class="list"><li>Leaf</li>
+        <li>Steam</li>
+        <li>branches</li>
+    </ul>
+</body>
+</html>
