@@ -1,0 +1,20 @@
+# Ignore node_modules (common for JavaScript projects)
+node_modules/
+
+# Ignore environment configuration files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore build and output directories
+dist/
+build/
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore system-generated files (MacOS, Windows)
+.DS_Store
+Thumbs.db
