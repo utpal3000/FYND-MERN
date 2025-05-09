@@ -1,8 +1,9 @@
 {
     "recommendations": [
         "formulahendry.code-runner",
-        "equinusocio.vsc-community-material-theme",
         "pkief.material-icon-theme",
-        "yandeu.five-server"
+        "yandeu.five-server",
+        "dsznajder.es7-react-js-snippets",
+        "enkia.tokyo-night"
     ]
 }

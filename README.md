@@ -49,3 +49,10 @@ https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-
 Here is **[Assignments Sheet](https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-dBo/edit?usp=sharing)**
 
 ## Class 19 - 
+
+## Class 34 -
+
+### React Basics -
+1. Setting up project using vite
+2. Components in react using JSX and styling.
+3. Packages in React

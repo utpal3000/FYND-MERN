@@ -1,5 +1,7 @@
 {
     "editor.tabCompletion": "on",
     "diffEditor.codeLens": true,
-    "MutableAI.upsell": false
+    "MutableAI.upsell": false,
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
 }
