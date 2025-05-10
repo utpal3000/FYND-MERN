@@ -4,6 +4,7 @@
         "pkief.material-icon-theme",
         "yandeu.five-server",
         "dsznajder.es7-react-js-snippets",
-        "enkia.tokyo-night"
+        "enkia.tokyo-night",
+        "esbenp.prettier-vscode"
     ]
 }

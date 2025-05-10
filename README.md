@@ -3,9 +3,17 @@ Fynd MERN (JavaScript) cohort Resources, Notes and etc.
 
 ## Resources 
 
+**Git Repo**
+
+
 https://github.com/orgs/FyndCoders/repositories
 
+**Assignments Doc**
+
+
 https://docs.google.com/document/d/1bRs3PtoXoWL0t2S_sORu9iiKuBUIY-T6GDKKOj1MjUw/edit?usp=sharing
+
+**Assignments Sheet**
 
 https://docs.google.com/spreadsheets/d/16a37wiJlPTiWiGoEeIdWcIzjJk6VKZ8CDozi_Kh-dBo/edit?usp=sharing
 

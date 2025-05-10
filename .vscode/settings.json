@@ -3,5 +3,10 @@
     "diffEditor.codeLens": true,
     "MutableAI.upsell": false,
     "IDX.aI.enableInlineCompletion": true,
-    "IDX.aI.enableCodebaseIndexing": true
+    "IDX.aI.enableCodebaseIndexing": true,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.renderCharacters": false,
+    
+
+    
 }

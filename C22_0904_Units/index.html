@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Examples</title>
+    <style>
+        /* Absolute Units */
+        .absolute {
+            width: 200px;
+            height: 100px;
+            font-size: 12pt;
+            border: 2in solid black;
+            background-color: lightgray;
+        }
+
+        /* Relative Units */
+        .relative {
+            font-size: 2em;
+            padding: 1.5rem;
+            background-color: lightblue;
+        }
+
+        /* Viewport Units */
+        .viewport {
+            width: 50vw;
+            height: 30vh;
+            background-color: lightgreen;
+        }
+
+        /* Percentage-based Sizing */
+        .parent {
+            width: 80%;
+            background-color: coral;
+        }
+
+        .child {
+            width: 50%;
+            background-color: yellow;
+        }
+
+        /* Miscellaneous Units */
+        .misc {
+            font-size: 2ex;
+            width: 10ch;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Units Examples</h1>
+
+    <div class="absolute">Absolute Units: px, pt, in</div>
+
+    <div class="relative">Relative Units: em, rem</div>
+
+    <div class="viewport">Viewport Units: vw, vh</div>
+
+    <div class="parent">
+        <div class="child">Percentage-based sizing: %</div>
+    </div>
+
+    <div class="misc">Miscellaneous Units: ex, ch</div>
+
+</body>
+</html>
