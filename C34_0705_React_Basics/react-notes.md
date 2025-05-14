@@ -121,10 +121,11 @@ React applications primarily use **Functional Components**. Class Components are
     // components/MyComponent.jsx
     import React from 'react'; // No longer strictly necessary for JSX in React 17+
 
-    function MyComponent(props) {
+    function MyComponent(props) { // u can also use de-struct if more than one props eg. {name,age}
       return (
         <div>
-          <h1>Hello, {props.name}!</h1>
+          <h1>Hello, {props.name}!</h1> 
+          <!-- It would be {name} is using de-struct -->
           <p>This is a functional component.</p>
         </div>
       );
