@@ -64,3 +64,13 @@ Here is **[Assignments Sheet](https://docs.google.com/spreadsheets/d/16a37wiJlPT
 1. Setting up project using vite
 2. Components in react using JSX and styling.
 3. Packages in React
+
+## Class 35 
+
+### React Components
+
+## Class 36
+
+### React useState
+What is useState? 
+How it affects and changes the values?
